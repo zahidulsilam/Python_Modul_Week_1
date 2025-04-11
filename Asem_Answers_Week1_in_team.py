@@ -120,6 +120,7 @@ half = int(length/ 2)
 while half > 0 :
     if word[first] != word[last-1]:
         print("This word is not  palindrome")
+        
         break
     first += 1
     last -= 1
@@ -134,3 +135,88 @@ if half <= 1:
 # Between 25-30 is normal,
 # If you are over 30-40, you are overweight.
 # If you are over 40, you are overweight.
+
+kg = float(input("Please enter your weight in Kg and more than zero "))
+while kg <= 0 :
+    kg = float(input("Please re-enter your weight in Kg and more than zero"))
+
+le = float(input('Please enter your height in M and more than zero'))
+while le <= 0 :
+    le = float(input('Please re-enter your height in M and more than zero '))
+
+bmi = le / (kg *kg)
+if bmi > 40 :(print("You are Highly overweight."))
+elif bmi > 30 :
+    print('You are Overweight.')
+elif bmi >= 25 :
+    print('Your Weight is Normal ')
+else: print(' You are underweight ')
+
+# Q 11: How to write a Python program that finds the largest of three numbers
+#  entered by a user?
+x = float(input("put the first num" ))
+y = float(input("put the second num" ))
+z= float(input("put the third num" ))
+largest = x
+if y >= x :
+    largest = y
+    if y <= z :
+        largest = z
+elif x<= z:
+    largest = z
+print("The largest Num is :", largest)
+
+#  Q12: Get Midterm and Final grades from a student for any course.
+#  The sum of 40% of the midterm exam grade and 60% of the final 
+#  grade will give the year-end average.
+#  If the average is below 50, "FAILED" will appear on the screen
+#  and if it is 50 or above, "CSUCESSFUL" will be displayed on the screen. 
+# This printing process is 4 lessons.
+#  and the lessons will be written one after the other.
+
+eng_res = ""
+math_res = ""
+his_res = ""
+geo_res = ""
+md_E = -1
+while md_E not in range (0,100):
+    md_E = float(input('Enter the student Midterm English grades'))
+fl_E = -1
+while fl_E not in range (0,101):
+    fl_E = float(input('Enter the student English Final grades'))
+if (md_E * 0.4 + fl_E *0.6) >= 50 :
+    eng_res= "Passed"
+else:
+    eng_res= 'Failed'
+md_E = -1
+while md_E not in range (0,100):
+    md_E = float(input('Enter the student Midterm Math grades'))
+fl_E = -1
+while fl_E not in range (0,101):
+    fl_E = float(input('Enter the student Math Final grades'))
+if (md_E * 0.4 + fl_E *0.6) >= 50 :
+    math_res= "Passed"
+else:
+    math_res= 'Failed'
+md_E = -1
+while md_E not in range (0,100):
+    md_E = float(input('Enter the student Midterm History grades'))
+fl_E = -1
+while fl_E not in range (0,101):
+    fl_E = float(input('Enter the student Final History grades'))
+if (md_E * 0.4 + fl_E *0.6) >= 50 :
+    his_res= "Passed"
+else:
+    his_res= 'Failed'
+md_E = -1
+while md_E not in range (0,100):
+    md_E = float(input('Enter the student Midterm Geography grades'))
+fl_E = -1
+while fl_E not in range (0,101):
+    fl_E = float(input('Enter the student Final Geography grades'))
+if (md_E * 0.4 + fl_E *0.6) >= 50 :
+    geo_res= "Passed"
+else:
+    geo_res= 'Failed'
+print("English Result is:",eng_res,"\nMath Result is:",math_res,"\nHistory result is:",his_res,"\nGeography Result is:",geo_res)
+
